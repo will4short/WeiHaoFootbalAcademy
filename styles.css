@@ -1,0 +1,333 @@
+:root {
+  --academy-green: #166534;
+  --accent-lime: #84cc16;
+  --accent-gold: #fbbf24;
+  --white: #ffffff;
+  --page-bg: #f6f6f9;
+  --text-dark: #232323;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--page-bg);
+  color: var(--text-dark);
+}
+
+header {
+  background: var(--academy-green);
+  padding: 1rem 0;
+  color: var(--white);
+  text-align: center;
+  position: relative;
+}
+
+.logo {
+  width: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 3px solid rgba(255,255,255,0.16);
+}
+
+header h1 {
+  margin: 0;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+}
+
+.tagline {
+  margin: 0.2rem 0 0.8rem 0;
+  font-size: 1rem;
+  color: var(--white);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+nav {
+  margin-top: 0.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 0.7em;
+  font-weight: 700;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive navigation */
+.nav-toggle {
+  display: none;
+  background: transparent;
+  color: white;
+  border: 2px solid rgba(255,255,255,0.15);
+  padding: 0.35em 0.7em;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.nav .nav-links {
+  display: flex;
+  gap: 0.7rem;
+  align-items: center;
+}
+
+@media (max-width: 640px) {
+  header {
+    padding: 0.8rem 0.8rem;
+    text-align: left;
+  }
+  .logo {
+    width: 56px;
+    float: left;
+    margin-right: 0.8rem;
+  }
+  header h1 {
+    font-size: 1.05rem;
+    margin: 0.2rem 0 0.6rem 0;
+  }
+  .tagline {
+    color: rgba(255,255,255,0.98);
+    margin-left: 0.8rem;
+  }
+  .nav-toggle {
+    display: inline-block;
+    margin-left: auto;
+    float: right;
+  }
+  .nav {
+    clear: both;
+  }
+  .nav .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-top: 0.8rem;
+  }
+  .nav.open .nav-links {
+    display: flex;
+  }
+  main {
+    padding: 1rem 0.8rem;
+  }
+  .gallery img {
+    width: 100px;
+  }
+  .cta-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    align-items: stretch;
+  }
+}
+
+main {
+  padding: 2rem 1rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+section {
+  margin-bottom: 2.5rem;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #0001;
+}
+
+h2 {
+  color: var(--academy-green);
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+.coach-list {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.coach {
+  flex: 1 1 160px;
+  text-align: center;
+}
+
+.coach img {
+  width: 90px;
+  border-radius: 50%;
+  margin-bottom: 0.5em;
+  border: 2px solid #33872c33;
+}
+
+.gallery {
+  display: flex;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery img {
+  width: 120px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px #0002;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+  max-width: 360px;
+}
+
+input, textarea {
+  padding: 0.6em;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+button {
+  background: var(--academy-green);
+  color: var(--white);
+  border: none;
+  padding: 0.8em;
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+}
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75em 1.2em;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.btn-primary {
+  background: var(--accent-lime);
+  color: #132300;
+}
+
+.btn-gold {
+  background: var(--accent-gold);
+  color: #3b2b00;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid rgba(255,255,255,0.22);
+}
+
+.why-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  flex: 1 1 180px;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 1.2rem;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  min-width: 180px;
+}
+
+.card h3 {
+  margin-top: 0;
+  color: var(--academy-green);
+}
+
+.card p {
+  margin: 0.6rem 0 0;
+  color: #374151;
+}
+
+.cta-group, .contact-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+footer {
+  background: #234d1e;
+  color: #eee;
+  text-align: center;
+  padding: 1em 0;
+  margin-top: 2rem;
+  font-size: 0.9em;
+}
+
+/* Accessibility helpers */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus {
+  left: 10px;
+  top: 10px;
+  width: auto;
+  height: auto;
+  padding: 0.6em 0.8em;
+  background: #fff;
+  color: #33872c;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px #0002;
+}
+
+/* Focus styles for keyboard users */
+a:focus, button:focus, input:focus, textarea:focus {
+  outline: 3px solid #88c58a;
+  outline-offset: 2px;
+}
+
+.form-status {
+  margin-top: 0.5rem;
+  color: #234d1e;
+  font-weight: bold;
+}
+
+.tagline {
+  margin: 0.15rem 0 0.8rem 0;
+  font-size: 0.95rem;
+  color: #f0f0f0;
+  opacity: 0.95;
+}
+
+@media (max-width: 640px) {
+  .tagline {
+    color: #333;
+    margin-left: 0.8rem;
+  }
+}
