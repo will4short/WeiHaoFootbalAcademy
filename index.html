@@ -1,362 +1,157 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>WEI HAO FOOTBALL ACADEMY | 衛豪足球學院</title>
-  <meta name="description" content="Wei Hao Football Academy — Home of the Kick & Speak™ Method. Developing football skills, confidence, teamwork, discipline, and communication.">
-  <meta property="og:title" content="WEI HAO FOOTBALL ACADEMY">
-  <meta property="og:description" content="Home of the Kick & Speak™ Method — developing football skills, confidence, teamwork, discipline, and communication.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wei Hao Football Academy | Football, confidence and communication</title>
+  <meta name="description" content="Professional, age-appropriate football coaching with English communication practice for children and young people at Wei Hao Football Academy.">
+  <meta name="theme-color" content="#0b3527">
+  <meta property="og:title" content="Wei Hao Football Academy">
+  <meta property="og:description" content="Football skills. Confident communication. Stronger young people.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=1600&q=85">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://images.unsplash.com">
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22%2333872c%22/%3E%3Ctext x=%2250%22 y=%2258%22 font-size=%2248%22 text-anchor=%22middle%22 fill=%22white%22 font-family=%22Segoe%20UI,Arial%22%3EL%3C/text%3E%3C/svg%3E'>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='47' fill='%230b3527'/%3E%3Cpath d='M50 20 65 31l-6 18H41l-6-18zM25 45l16 4 5 17-13 11-13-10zm50 0-16 4-5 17 13 11 13-10zM33 77l13-11h8l13 11-6 3H39z' fill='%23d8f23f'/%3E%3C/svg%3E">
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to main content</a>
-  <header>
-    <button class="lang-switch" id="langSwitchBtn">中文</button>
-    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=200&q=80" alt="Soccer ball logo" class="logo" width="80" height="80" loading="eager" decoding="async">
-    <h1 id="title">WEI HAO FOOTBALL ACADEMY</h1>
-    <p class="tagline" id="tagline">Home of the Kick & Speak™ Method</p>
-    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Toggle navigation">Menu</button>
-    <nav id="mainNav" class="nav" aria-label="Main navigation">
-      <div class="nav-links" id="navLinks">
-        <a href="#about" id="nav_about">About</a>
-        <a href="#programs" id="nav_programs">Programs</a>
-        <a href="#why" id="nav_why">Why Choose Us</a>
-        <a href="#schedules" id="nav_schedules">Schedules</a>
-        <a href="#coaches" id="nav_coaches">Coaches</a>
-        <a href="#gallery" id="nav_gallery">Gallery</a>
-        <a href="#contact" id="nav_contact">Contact</a>
+<body data-lang="en">
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to main content</a>
+
+  <header class="site-header" id="top">
+    <div class="container nav-shell">
+      <a class="brand" href="#top" aria-label="Wei Hao Football Academy home">
+        <span class="brand-mark" aria-hidden="true">WH</span>
+        <span class="brand-copy"><strong>WEI HAO</strong><small data-i18n="brandSub">Football Academy</small></span>
+      </a>
+      <nav class="primary-nav" id="primaryNav" aria-label="Main navigation">
+        <a href="#method" data-i18n="navMethod">Our Method</a>
+        <a href="#programs" data-i18n="navPrograms">Programs</a>
+        <a href="#experience" data-i18n="navExperience">Experience</a>
+        <a href="#contact" data-i18n="navContact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="language-button" id="languageButton" type="button" aria-label="Switch to Traditional Chinese">中文</button>
+        <a class="button button-small button-accent nav-cta" href="#contact" data-i18n="bookTrial">Book a trial</a>
+        <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="primaryNav"><span></span><span></span><span></span><span class="sr-only" data-i18n="menu">Menu</span></button>
       </div>
-    </nav>
-    <div class="cta-group" style="margin-top:0.8rem; display:flex;flex-wrap:wrap;justify-content:center;gap:0.7rem;">
-      <a class="btn btn-primary" href="#contact" id="joinBtn">Join the Academy</a>
-      <a class="btn btn-gold" href="#contact" id="trialBtn">Book a Trial Session</a>
-      <a class="btn btn-secondary" href="mailto:will@weihaoacademy.com" id="contactCoachBtn">Contact Coach Will</a>
     </div>
   </header>
 
-  <main>
-    <div id="main">
-    <section id="about">
-      <h2 id="about_heading">About Wei Hao Football Academy</h2>
-      <p id="about_text">At Wei Hao Football Academy, we help children and youth develop football skills, confidence, teamwork, discipline, and communication.</p>
-      <p id="about_sub1">Our Kick &amp; Speak™ approach combines professional football training with English communication in a fun and encouraging environment.</p>
-      <p id="about_sub2">We believe every child can grow through sport — both on and off the field.</p>
-    </section>
-
-    <section id="programs">
-      <h2 id="programs_heading">Programs</h2>
-      <ul>
-        <li id="program1"><strong id="program1_title">Little Kickers</strong> (<span id="program1_age">Ages 4–6</span>)</li>
-        <li id="program2"><strong id="program2_title">Junior Academy</strong> (<span id="program2_age">Ages 7–10</span>)</li>
-        <li id="program3"><strong id="program3_title">Youth Development</strong> (<span id="program3_age">Ages 11–14</span>)</li>
-        <li id="program4"><strong id="program4_title">Elite Training Squad</strong> (<span id="program4_age">Ages 15–18</span>)</li>
-      </ul>
-    </section>
-
-    <section id="why">
-      <h2 id="why_heading">Why Choose Us?</h2>
-      <div class="why-cards">
-        <div class="card"><h3 id="why1_title">⚽ Professional Coaching</h3><p id="why1_desc">Structured sessions led by qualified trainers.</p></div>
-        <div class="card"><h3 id="why2_title">🌍 International Environment</h3><p id="why2_desc">Multilingual, multicultural training atmosphere.</p></div>
-        <div class="card"><h3 id="why3_title">🗣️ English Communication Practice</h3><p id="why3_desc">Kick &amp; Speak™ integrates English during football drills.</p></div>
-        <div class="card"><h3 id="why4_title">💪 Confidence & Discipline</h3><p id="why4_desc">Develops resilience and positive habits on and off the pitch.</p></div>
-        <div class="card"><h3 id="why5_title">🤝 Teamwork & Respect</h3><p id="why5_desc">Core values embedded in every session.</p></div>
-      </div>
-    </section>
-
-    <section id="schedules">
-      <h2 id="schedules_heading">Practice & Game Schedule</h2>
-      <ul>
-        <li id="schedule_practice"><strong>Practices:</strong> Tuesdays & Thursdays, 5:00 PM – 6:30 PM at Central Park Field #3</li>
-        <li id="schedule_game"><strong>Games:</strong> Saturdays, 10:00 AM (Check email weekly for location updates)</li>
-      </ul>
-      <p id="schedule_season">Season runs from April 1 – June 30.</p>
-    </section>
-
-    <section id="coaches">
-      <h2 id="coaches_heading">Meet the Coaches</h2>
-      <div class="coach-list">
-        <div class="coach">
-          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Coach Will" width="90" height="90" loading="lazy" decoding="async">
-          <h3 id="coach1_name">Coach Will</h3>
-          <p id="coach1_desc">Head Coach. Experienced trainer focused on elite youth development, communication, and confidence.</p>
-        </div>
-        <div class="coach">
-          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Coach Maria" width="90" height="90" loading="lazy" decoding="async">
-          <h3 id="coach2_name">Coach Maria</h3>
-          <p id="coach2_desc">Assistant Coach. Great with beginners and always brings the energy!</p>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-media" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="heroEyebrow">Football • English • Character</p>
+          <h1 id="hero-title" data-i18n="heroTitle">Build the player.<br><em>Grow the person.</em></h1>
+          <p class="hero-lead" data-i18n="heroLead">Age-appropriate football coaching that develops skill, confident communication, teamwork and discipline—in one positive training environment.</p>
+          <div class="hero-actions">
+            <a class="button button-accent" href="#contact" data-i18n="trialCta">Book a trial session</a>
+            <a class="text-link" href="#method"><span data-i18n="discoverMethod">Discover Kick &amp; Speak™</span><span aria-hidden="true">→</span></a>
+          </div>
+          <ul class="hero-points" aria-label="Academy highlights">
+            <li><strong>4–18</strong><span data-i18n="ages">Age groups</span></li>
+            <li><strong>4</strong><span data-i18n="pathways">Development pathways</span></li>
+            <li><strong>2-in-1</strong><span data-i18n="methodStat">Football + English</span></li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <section id="gallery">
-      <h2 id="gallery_heading">Photo Gallery</h2>
-      <div class="gallery">
-        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Team Photo" width="120" height="80" loading="lazy" decoding="async">
-        <img src="https://images.unsplash.com/photo-1508711044548-207b6be3bffa?auto=format&fit=crop&w=400&q=80" alt="Kids playing soccer" width="120" height="80" loading="lazy" decoding="async">
-        <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=400&q=80" alt="Goal celebration" width="120" height="80" loading="lazy" decoding="async">
+    <section class="trust-strip" aria-label="Academy values">
+      <div class="container trust-grid">
+        <p><span aria-hidden="true">01</span><strong data-i18n="trust1Title">Purposeful coaching</strong><small data-i18n="trust1Text">Every drill has a development goal.</small></p>
+        <p><span aria-hidden="true">02</span><strong data-i18n="trust2Title">Positive environment</strong><small data-i18n="trust2Text">Challenge, encouragement and respect.</small></p>
+        <p><span aria-hidden="true">03</span><strong data-i18n="trust3Title">Whole-person growth</strong><small data-i18n="trust3Text">Skills that travel beyond the pitch.</small></p>
       </div>
     </section>
 
-    <section id="contact">
-      <h2 id="contact_heading">Contact Us</h2>
-      <p id="contact_text">Questions or interested in joining? Email us at <a id="contact_email" href="mailto:info@weihaoacademy.com">info@weihaoacademy.com</a> or contact Coach Will at (555) 123-4567.</p>
-      <div class="contact-cta" style="margin-bottom:1rem;display:flex;flex-wrap:wrap;gap:0.75rem;">
-        <a class="btn btn-primary" href="#contactForm">Join the Academy</a>
-        <a class="btn btn-gold" href="#contactForm">Book a Trial Session</a>
-        <a class="btn btn-secondary" href="mailto:will@weihaoacademy.com">Contact Coach Will</a>
+    <section class="section method-section" id="method">
+      <div class="container split-layout">
+        <div class="section-intro">
+          <p class="eyebrow dark" data-i18n="methodEyebrow">The Wei Hao difference</p>
+          <h2 data-i18n="methodTitle">Train the feet.<br>Engage the mind.<br>Find your voice.</h2>
+        </div>
+        <div class="method-content">
+          <p class="large-copy" data-i18n="methodLead">Kick &amp; Speak™ brings football development and practical English communication into the same active session.</p>
+          <p data-i18n="methodBody">Players learn through movement, instruction, decision-making and team interaction. The result is training that feels natural, energetic and relevant—not another classroom lesson.</p>
+          <div class="method-steps">
+            <article><span>01</span><div><h3 data-i18n="step1Title">Listen &amp; understand</h3><p data-i18n="step1Text">Clear coaching language connected to real actions.</p></div></article>
+            <article><span>02</span><div><h3 data-i18n="step2Title">Move &amp; master</h3><p data-i18n="step2Text">Progressive drills that build technique and game awareness.</p></div></article>
+            <article><span>03</span><div><h3 data-i18n="step3Title">Speak &amp; lead</h3><p data-i18n="step3Text">Communication, teamwork and confidence under pressure.</p></div></article>
+          </div>
+        </div>
       </div>
-      <form id="contactForm" method="post" action="#" novalidate>
-        <label for="form_name" class="visually-hidden">Your name</label>
-        <input type="text" id="form_name" name="name" placeholder="Your name" aria-required="true" required>
+    </section>
 
-        <label for="form_email" class="visually-hidden">Your email</label>
-        <input type="email" id="form_email" name="email" placeholder="Your email" aria-required="true" required>
+    <section class="section programs-section" id="programs">
+      <div class="container">
+        <div class="section-heading-row">
+          <div><p class="eyebrow" data-i18n="programEyebrow">A pathway for every stage</p><h2 data-i18n="programTitle">Programs that grow with the player.</h2></div>
+          <p data-i18n="programIntro">Each group balances technical development, age-appropriate challenges and the joy that keeps young players coming back.</p>
+        </div>
+        <div class="program-grid">
+          <article class="program-card"><div class="program-number">01</div><p class="program-age" data-i18n="age46">Ages 4–6</p><h3 data-i18n="littleTitle">Little Kickers</h3><p data-i18n="littleText">Playful movement, ball familiarity, listening and positive first experiences.</p><a href="#contact" data-program="Little Kickers"><span data-i18n="askProgram">Ask about this program</span> →</a></article>
+          <article class="program-card"><div class="program-number">02</div><p class="program-age" data-i18n="age710">Ages 7–10</p><h3 data-i18n="juniorTitle">Junior Academy</h3><p data-i18n="juniorText">Core technique, coordination, simple decisions and confident teamwork.</p><a href="#contact" data-program="Junior Academy"><span data-i18n="askProgram">Ask about this program</span> →</a></article>
+          <article class="program-card featured"><div class="program-number">03</div><p class="program-age" data-i18n="age1114">Ages 11–14</p><h3 data-i18n="youthTitle">Youth Development</h3><p data-i18n="youthText">Game understanding, positional awareness, resilience and communication.</p><a href="#contact" data-program="Youth Development"><span data-i18n="askProgram">Ask about this program</span> →</a></article>
+          <article class="program-card"><div class="program-number">04</div><p class="program-age" data-i18n="age1518">Ages 15–18</p><h3 data-i18n="eliteTitle">Elite Training Squad</h3><p data-i18n="eliteText">Higher-intensity technical, tactical and leadership development.</p><a href="#contact" data-program="Elite Training Squad"><span data-i18n="askProgram">Ask about this program</span> →</a></article>
+        </div>
+      </div>
+    </section>
 
-        <label for="form_message" class="visually-hidden">Your message</label>
-        <textarea rows="3" id="form_message" name="message" placeholder="Your message" aria-required="true" required></textarea>
+    <section class="section experience-section" id="experience">
+      <div class="container experience-grid">
+        <div class="experience-photo"><img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=1200&q=85" alt="Football players training together on a pitch" loading="lazy" width="900" height="1050"></div>
+        <div class="experience-copy">
+          <p class="eyebrow dark" data-i18n="experienceEyebrow">More than a training session</p>
+          <h2 data-i18n="experienceTitle">A place to compete, connect and belong.</h2>
+          <p class="large-copy" data-i18n="experienceLead">Young players make the best progress when they feel safe enough to try, supported enough to fail and motivated enough to keep going.</p>
+          <ul class="check-list">
+            <li data-i18n="benefit1">Structured, progressive sessions</li>
+            <li data-i18n="benefit2">Age-appropriate groups and challenges</li>
+            <li data-i18n="benefit3">Teamwork, respect and positive habits</li>
+            <li data-i18n="benefit4">Practical communication through play</li>
+          </ul>
+          <p class="note" data-i18n="scheduleNote">Session times, locations and current availability are confirmed directly with families so you always receive the latest information.</p>
+        </div>
+      </div>
+    </section>
 
-        <button type="submit" id="form_submit">Send</button>
-        <div id="formStatus" role="status" aria-live="polite" class="form-status" aria-atomic="true"></div>
-      </form>
+    <section class="section contact-section" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-copy">
+          <p class="eyebrow" data-i18n="contactEyebrow">Your first session starts here</p>
+          <h2 data-i18n="contactTitle">Ready to see if Wei Hao is the right fit?</h2>
+          <p data-i18n="contactLead">Tell us a little about your player. We’ll help you identify the most suitable group and share current session details.</p>
+          <a class="direct-email" href="mailto:info@weihaoacademy.com">info@weihaoacademy.com</a>
+          <p class="response-note" data-i18n="responseNote">Prefer email? Contact us directly using the address above.</p>
+        </div>
+        <form class="trial-form" id="trialForm">
+          <div class="field-row">
+            <label><span data-i18n="parentName">Parent / guardian name</span><input type="text" name="name" autocomplete="name" required></label>
+            <label><span data-i18n="email">Email address</span><input type="email" name="email" autocomplete="email" required></label>
+          </div>
+          <div class="field-row">
+            <label><span data-i18n="playerAge">Player age</span><input type="number" name="age" min="4" max="18" inputmode="numeric" required></label>
+            <label><span data-i18n="programLabel">Program of interest</span><select name="program" id="programSelect" required><option value="" data-i18n="chooseProgram">Choose a program</option><option>Little Kickers</option><option>Junior Academy</option><option>Youth Development</option><option>Elite Training Squad</option><option data-i18n="notSure">Not sure yet</option></select></label>
+          </div>
+          <label><span data-i18n="messageLabel">Anything we should know?</span><textarea name="message" rows="4" data-i18n-placeholder="messagePlaceholder" placeholder="Experience, goals, preferred days or questions"></textarea></label>
+          <button class="button button-accent button-wide" type="submit" data-i18n="sendEnquiry">Prepare trial enquiry</button>
+          <p class="form-help" data-i18n="formHelp">Submitting opens your email app with the enquiry ready to send. No information is stored on this website.</p>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p id="footer_text">&copy; 2026 Wei Hao Football Academy. All rights reserved.</p>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true">WH</span><span class="brand-copy"><strong>WEI HAO</strong><small data-i18n="brandSub">Football Academy</small></span></a>
+      <p data-i18n="footerLine">Developing skilful players and confident young people.</p>
+      <div><a href="mailto:info@weihaoacademy.com">info@weihaoacademy.com</a><small>© <span id="year"></span> Wei Hao Football Academy</small></div>
+    </div>
   </footer>
-  <script>
-    // Basic client-side form handler (progressive enhancement)
-    document.getElementById('contactForm').addEventListener('submit', function (e) {
-      e.preventDefault();
-      const name = document.getElementById('form_name').value.trim();
-      const email = document.getElementById('form_email').value.trim();
-      const message = document.getElementById('form_message').value.trim();
-      const status = document.getElementById('formStatus');
-      if (!name || !email || !message) {
-        status.textContent = 'Please complete all fields.';
-        return;
-      }
-      // Simulate successful submission (replace with real endpoint)
-      status.textContent = 'Thanks! Your message has been sent.';
-      this.reset();
-    });
-
-    // Responsive nav toggle
-    (function () {
-      const toggle = document.getElementById('navToggle');
-      const nav = document.getElementById('mainNav');
-      if (!toggle || !nav) return;
-      toggle.addEventListener('click', function () {
-        const expanded = this.getAttribute('aria-expanded') === 'true';
-        this.setAttribute('aria-expanded', String(!expanded));
-        nav.classList.toggle('open');
-      });
-    })();
-
-    // Smooth CTA scroll
-    ['joinBtn','trialBtn'].forEach(id => {
-      const btn = document.getElementById(id);
-      btn?.addEventListener('click', event => {
-        event.preventDefault();
-        document.getElementById('contactForm')?.scrollIntoView({behavior:'smooth'});
-      });
-    });
-
-    // EN and Traditional Chinese
-    const translations = {
-      en: {
-        lang_btn: "中文",
-        title: "WEI HAO FOOTBALL ACADEMY",
-        tagline: "Home of the Kick & Speak™ Method",
-        nav_about: "About",
-        nav_programs: "Programs",
-        nav_why: "Why Choose Us",
-        nav_schedules: "Schedules",
-        nav_coaches: "Coaches",
-        nav_gallery: "Gallery",
-        nav_contact: "Contact",
-        about_heading: "About Wei Hao Football Academy",
-        about_text: "At Wei Hao Football Academy, we help children and youth develop football skills, confidence, teamwork, discipline, and communication.",
-        about_sub1: "Our Kick &amp; Speak™ approach combines professional football training with English communication in a fun and encouraging environment.",
-        about_sub2: "We believe every child can grow through sport — both on and off the field.",
-        programs_heading: "Programs",
-        program1_title: "Little Kickers",
-        program1_age: "Ages 4–6",
-        program2_title: "Junior Academy",
-        program2_age: "Ages 7–10",
-        program3_title: "Youth Development",
-        program3_age: "Ages 11–14",
-        program4_title: "Elite Training Squad",
-        program4_age: "Ages 15–18",
-        why_heading: "Why Choose Us?",
-        why1_title: "⚽ Professional Coaching",
-        why1_desc: "Structured sessions led by qualified trainers.",
-        why2_title: "🌍 International Environment",
-        why2_desc: "Multilingual, multicultural training atmosphere.",
-        why3_title: "🗣️ English Communication Practice",
-        why3_desc: "Kick & Speak™ integrates English during football drills.",
-        why4_title: "💪 Confidence & Discipline",
-        why4_desc: "Develops resilience and positive habits on and off the pitch.",
-        why5_title: "🤝 Teamwork & Respect",
-        why5_desc: "Core values embedded in every session.",
-        schedules_heading: "Practice & Game Schedule",
-        schedule_practice: "<strong>Practices:</strong> Tuesdays & Thursdays, 5:00 PM – 6:30 PM at Central Park Field #3",
-        schedule_game: "<strong>Games:</strong> Saturdays, 10:00 AM (Check email weekly for location updates)",
-        schedule_season: "Season runs from April 1 – June 30.",
-        coaches_heading: "Meet the Coaches",
-        coach1_name: "Coach Will",
-        coach1_desc: "Head Coach. Experienced trainer focused on elite youth development, communication, and confidence.",
-        coach2_name: "Coach Maria",
-        coach2_desc: "Assistant Coach. Great with beginners and always brings the energy!",
-        gallery_heading: "Photo Gallery",
-        contact_heading: "Contact Us",
-        contact_text: `Questions or interested in joining? Email us at <a id="contact_email" href="mailto:info@weihaoacademy.com">info@weihaoacademy.com</a> or contact Coach Will at (555) 123-4567.`,
-        join_button: "Join the Academy",
-        trial_button: "Book a Trial Session",
-        contact_coach_button: "Contact Coach Will",
-        form_name: "Your name",
-        form_email: "Your email",
-        form_message: "Your message",
-        form_submit: "Send",
-        footer_text: "&copy; 2026 Wei Hao Football Academy. All rights reserved.",
-      },
-      zh: {
-        lang_btn: "English",
-        title: "衛豪足球學院",
-        tagline: "「踢與說™」方法之家",
-        nav_about: "關於",
-        nav_programs: "課程",
-        nav_why: "為何選擇我們",
-        nav_schedules: "時間表",
-        nav_coaches: "教練",
-        nav_gallery: "相片集",
-        nav_contact: "聯絡我們",
-        about_heading: "關於衛豪足球學院",
-        about_text: "在衛豪足球學院，我們協助兒童與青少年發展足球技巧、自信、團隊合作、紀律和溝通能力。",
-        about_sub1: "我們的踢與說™課程將專業足球訓練與英語溝通實戰結合，讓學習過程充滿樂趣與鼓勵。",
-        about_sub2: "我們相信每位孩子都能透過運動成長——不只在球場上，也在生活中。",
-        programs_heading: "課程",
-        program1_title: "小小踢客",
-        program1_age: "4–6 歲",
-        program2_title: "青少年學院",
-        program2_age: "7–10 歲",
-        program3_title: "青少年發展",
-        program3_age: "11–14 歲",
-        program4_title: "精英訓練隊",
-        program4_age: "15–18 歲",
-        why_heading: "為何選擇我們",
-        why1_title: "⚽ 專業教練指導",
-        why1_desc: "專業教練帶領結構化訓練課程。",
-        why2_title: "🌍 國際環境",
-        why2_desc: "多語言、多文化的訓練氛圍。",
-        why3_title: "🗣️ 英語溝通練習",
-        why3_desc: "踢與說™ 將英語融入足球訓練。",
-        why4_title: "💪 自信與紀律",
-        why4_desc: "培養場內場外的韌性與正向習慣。",
-        why5_title: "🤝 團隊合作與尊重",
-        why5_desc: "每堂課都融入核心價值。",
-        schedules_heading: "練習與比賽時間表",
-        schedule_practice: "<strong>練習：</strong> 星期二及星期四，下午5:00–6:30，中央公園三號場",
-        schedule_game: "<strong>比賽：</strong> 星期六，上午10:00（地點請每星期查閱電郵通知）",
-        schedule_season: "球季：4月1日至6月30日。",
-        coaches_heading: "認識我們的教練",
-        coach1_name: "James 教練",
-        coach1_desc: "總教練。曾參加大學校隊，熱愛教導新技能，讓練習充滿樂趣。",
-        coach2_name: "Maria 教練",
-        coach2_desc: "助理教練。對初學者特別有耐心，總是活力滿滿！",
-        gallery_heading: "相片集",
-        contact_heading: "聯絡我們",
-        contact_text: `如有查詢或有興趣加入，歡迎電郵 <a id="contact_email" href="mailto:info@weihaoacademy.com">info@weihaoacademy.com</a> 或聯絡 Will 教練：(555) 123-4567。`,
-        join_button: "加入學院",
-        trial_button: "預約試堂",
-        contact_coach_button: "聯絡 Will 教練",
-        form_name: "您的姓名",
-        form_email: "您的電郵",
-        form_message: "您的留言",
-        form_submit: "送出",
-        footer_text: "&copy; 2026 衛豪足球學院。保留所有權利。",
-      }
-    };
-
-    let currentLang = 'en';
-    function switchLang() {
-      currentLang = currentLang === 'en' ? 'zh' : 'en';
-      const t = translations[currentLang];
-      document.documentElement.lang = currentLang === 'en' ? 'en' : 'zh-Hant';
-
-      // Header & Nav
-      document.getElementById('langSwitchBtn').textContent = t.lang_btn;
-      document.getElementById('title').textContent = t.title;
-      if (document.getElementById('tagline')) document.getElementById('tagline').textContent = t.tagline || '';
-      document.getElementById('nav_about').textContent = t.nav_about;
-      document.getElementById('nav_programs').textContent = t.nav_programs;
-      document.getElementById('nav_why').textContent = t.nav_why;
-      document.getElementById('nav_schedules').textContent = t.nav_schedules;
-      document.getElementById('nav_coaches').textContent = t.nav_coaches;
-      document.getElementById('nav_gallery').textContent = t.nav_gallery;
-      document.getElementById('nav_contact').textContent = t.nav_contact;
-
-      // Main sections
-      document.getElementById('about_heading').textContent = t.about_heading;
-      document.getElementById('about_text').textContent = t.about_text;
-      document.getElementById('about_sub1').textContent = t.about_sub1;
-      document.getElementById('about_sub2').textContent = t.about_sub2;
-      document.getElementById('programs_heading').textContent = t.programs_heading;
-      document.getElementById('program1_title').textContent = t.program1_title;
-      document.getElementById('program1_age').textContent = t.program1_age;
-      document.getElementById('program2_title').textContent = t.program2_title;
-      document.getElementById('program2_age').textContent = t.program2_age;
-      document.getElementById('program3_title').textContent = t.program3_title;
-      document.getElementById('program3_age').textContent = t.program3_age;
-      document.getElementById('program4_title').textContent = t.program4_title;
-      document.getElementById('program4_age').textContent = t.program4_age;
-      document.getElementById('why_heading').textContent = t.why_heading;
-      document.getElementById('why1_title').textContent = t.why1_title;
-      document.getElementById('why1_desc').textContent = t.why1_desc;
-      document.getElementById('why2_title').textContent = t.why2_title;
-      document.getElementById('why2_desc').textContent = t.why2_desc;
-      document.getElementById('why3_title').textContent = t.why3_title;
-      document.getElementById('why3_desc').textContent = t.why3_desc;
-      document.getElementById('why4_title').textContent = t.why4_title;
-      document.getElementById('why4_desc').textContent = t.why4_desc;
-      document.getElementById('why5_title').textContent = t.why5_title;
-      document.getElementById('why5_desc').textContent = t.why5_desc;
-      document.getElementById('schedules_heading').textContent = t.schedules_heading;
-      document.getElementById('schedule_practice').innerHTML = t.schedule_practice;
-      document.getElementById('schedule_game').innerHTML = t.schedule_game;
-      document.getElementById('schedule_season').textContent = t.schedule_season;
-      document.getElementById('coaches_heading').textContent = t.coaches_heading;
-      document.getElementById('coach1_name').textContent = t.coach1_name;
-      document.getElementById('coach1_desc').textContent = t.coach1_desc;
-      document.getElementById('coach2_name').textContent = t.coach2_name;
-      document.getElementById('coach2_desc').textContent = t.coach2_desc;
-      document.getElementById('gallery_heading').textContent = t.gallery_heading;
-      document.getElementById('contact_heading').textContent = t.contact_heading;
-      document.getElementById('contact_text').innerHTML = t.contact_text;
-      document.getElementById('joinBtn').textContent = t.join_button;
-      document.getElementById('trialBtn').textContent = t.trial_button;
-      document.getElementById('contactCoachBtn').textContent = t.contact_coach_button;
-
-      // Form
-      document.getElementById('form_name').placeholder = t.form_name;
-      document.getElementById('form_email').placeholder = t.form_email;
-      document.getElementById('form_message').placeholder = t.form_message;
-      document.getElementById('form_submit').textContent = t.form_submit;
-
-      // Footer
-      document.getElementById('footer_text').innerHTML = t.footer_text;
-      // Update document title for SEO / clarity when language switches
-      document.title = t.title;
-    }
-
-    document.getElementById('langSwitchBtn').addEventListener('click', switchLang);
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
