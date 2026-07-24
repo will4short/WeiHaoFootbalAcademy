@@ -27,6 +27,7 @@
       <nav class="primary-nav" id="primaryNav" aria-label="Main navigation">
         <a href="#method" data-i18n="navMethod">Our Method</a>
         <a href="#programs" data-i18n="navPrograms">Programs</a>
+        <a href="#coach" data-i18n="navCoach">Coach</a>
         <a href="#experience" data-i18n="navExperience">Experience</a>
         <a href="#contact" data-i18n="navContact">Contact</a>
       </nav>
@@ -100,9 +101,28 @@
       </div>
     </section>
 
+    <section class="section coach-section" id="coach">
+      <div class="container coach-grid">
+        <div class="coach-photo">
+          <img src="Images/Coach%20Will/Coach%20Will%20profile.png" alt="Coach Godswill Ambrose" loading="lazy" width="1200" height="1200">
+          <div class="coach-caption"><strong>Godswill Ambrose</strong><span data-i18n="founderCoach">Founder &amp; Coach</span></div>
+        </div>
+        <div class="coach-copy">
+          <p class="eyebrow dark" data-i18n="coachEyebrow">Meet Coach Will</p>
+          <h2 data-i18n="coachTitle">Football experience. A student of people.</h2>
+          <p class="large-copy" data-i18n="coachLead">Godswill “Coach Will” Ambrose began his football journey in Nigeria, where the game shaped his understanding of discipline, resilience and belonging.</p>
+          <p data-i18n="coachBody">Alongside football, he is studying psychology—deepening his interest in how young people learn, build confidence and respond to challenge. Wei Hao Football Academy brings those two paths together through purposeful, encouraging coaching.</p>
+          <div class="credential-card">
+            <span class="credential-icon" aria-hidden="true">✓</span>
+            <div><small data-i18n="verifiedCredential">Verified coaching education</small><strong>EE Playmaker by England Football</strong><p data-i18n="credentialDate">Successfully completed 20 May 2026</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section experience-section" id="experience">
       <div class="container experience-grid">
-        <div class="experience-photo"><img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=1200&q=85" alt="Football players training together on a pitch" loading="lazy" width="900" height="1050"></div>
+        <div class="experience-photo"><img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=1200&q=85" alt="A football player controlling the ball on the pitch" loading="lazy" width="900" height="1050"></div>
         <div class="experience-copy">
           <p class="eyebrow dark" data-i18n="experienceEyebrow">More than a training session</p>
           <h2 data-i18n="experienceTitle">A place to compete, connect and belong.</h2>
@@ -123,9 +143,12 @@
         <div class="contact-copy">
           <p class="eyebrow" data-i18n="contactEyebrow">Your first session starts here</p>
           <h2 data-i18n="contactTitle">Ready to see if Wei Hao is the right fit?</h2>
-          <p data-i18n="contactLead">Tell us a little about your player. We’ll help you identify the most suitable group and share current session details.</p>
+          <p data-i18n="contactLead">Wei Hao is preparing to launch in Taiwan, with Taipei, New Taipei and Hsinchu under consideration. Tell us where your family is based and help shape the first training groups.</p>
+          <div class="launch-cities" aria-label="Potential launch cities"><span>Taipei</span><span>New Taipei</span><span>Hsinchu</span></div>
           <a class="direct-email" href="mailto:info@weihaoacademy.com">info@weihaoacademy.com</a>
-          <p class="response-note" data-i18n="responseNote">Prefer email? Contact us directly using the address above.</p>
+          <a class="direct-phone" href="tel:+886975235228">+886 975-235-228</a>
+          <a class="whatsapp-link" href="https://wa.me/886975235228" target="_blank" rel="noopener"><span data-i18n="whatsapp">Message on WhatsApp</span> →</a>
+          <p class="response-note" data-i18n="responseNote">Pre-launch enquiries are welcome in English or Traditional Chinese.</p>
         </div>
         <form class="trial-form" id="trialForm">
           <div class="field-row">
@@ -134,13 +157,26 @@
           </div>
           <div class="field-row">
             <label><span data-i18n="playerAge">Player age</span><input type="number" name="age" min="4" max="18" inputmode="numeric" required></label>
-            <label><span data-i18n="programLabel">Program of interest</span><select name="program" id="programSelect" required><option value="" data-i18n="chooseProgram">Choose a program</option><option>Little Kickers</option><option>Junior Academy</option><option>Youth Development</option><option>Elite Training Squad</option><option data-i18n="notSure">Not sure yet</option></select></label>
+            <label><span data-i18n="phoneLabel">Phone / WhatsApp</span><input type="tel" name="phone" autocomplete="tel"></label>
           </div>
+          <div class="field-row"><label><span data-i18n="cityLabel">Preferred city</span><select name="city" required><option value="" data-i18n="chooseCity">Choose a city</option><option>Taipei</option><option>New Taipei</option><option>Hsinchu</option><option data-i18n="anotherCity">Another city</option></select></label><label><span data-i18n="programLabel">Program of interest</span><select name="program" id="programSelect" required><option value="" data-i18n="chooseProgram">Choose a program</option><option>Little Kickers</option><option>Junior Academy</option><option>Youth Development</option><option>Elite Training Squad</option><option data-i18n="notSure">Not sure yet</option></select></label></div>
           <label><span data-i18n="messageLabel">Anything we should know?</span><textarea name="message" rows="4" data-i18n-placeholder="messagePlaceholder" placeholder="Experience, goals, preferred days or questions"></textarea></label>
           <button class="button button-accent button-wide" type="submit" data-i18n="sendEnquiry">Prepare trial enquiry</button>
           <p class="form-help" data-i18n="formHelp">Submitting opens your email app with the enquiry ready to send. No information is stored on this website.</p>
           <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
         </form>
+      </div>
+    </section>
+
+    <section class="section policies-section" id="policies">
+      <div class="container">
+        <div class="policy-heading"><div><p class="eyebrow dark" data-i18n="policiesEyebrow">Our pre-launch commitments</p><h2 data-i18n="policiesTitle">Care, clarity and respect from day one.</h2></div><p data-i18n="policiesIntro">These summaries explain how we intend to operate while final venue-specific procedures and enrollment terms are being prepared.</p></div>
+        <div class="policy-list">
+          <details id="safeguarding"><summary><span>01</span><strong data-i18n="safeguardingTitle">Safeguarding</strong><span class="plus" aria-hidden="true">+</span></summary><div><p data-i18n="safeguardingText">The welfare of every child comes first. Training will use age-appropriate coaching, respectful conduct and clear boundaries. A parent or guardian will provide consent for participation, photography and the handling of relevant information. Safeguarding concerns can be reported privately to the academy by email, telephone or WhatsApp and will be taken seriously, documented appropriately and referred to the relevant authority when required.</p></div></details>
+          <details id="cancellations"><summary><span>02</span><strong data-i18n="cancellationTitle">Bookings &amp; cancellations</strong><span class="plus" aria-hidden="true">+</span></summary><div><p data-i18n="cancellationText">Trial places are not confirmed until the academy sends written confirmation. Families should give as much notice as possible if they cannot attend. If the academy cancels a confirmed session, families will be offered a rescheduled session or an appropriate credit or refund where payment was made. Final fees, notice periods and refund terms will be shown before any paid enrollment is accepted.</p></div></details>
+          <details id="privacy"><summary><span>03</span><strong data-i18n="privacyTitle">Privacy</strong><span class="plus" aria-hidden="true">+</span></summary><div><p data-i18n="privacyText">Wei Hao Football Academy collects the parent or guardian contact details, player age, preferred city, program interest and message that you voluntarily provide. We use this information in Taiwan to answer enquiries, plan trial groups and communicate about academy services. It may be handled by authorized academy personnel and the email, telephone or messaging providers you choose to use. We do not sell personal data. We retain it only while reasonably needed for these purposes or a legal obligation. Providing information is optional, but without the required contact and player details we may be unable to respond or recommend a suitable group. Please do not send sensitive medical or identification information through this website.</p><p class="policy-note" data-i18n="privacyRights">You may ask to review or receive a copy of your data, request a correction, ask us to stop using it, or request deletion where legally available. Contact info@weihaoacademy.com.</p></div></details>
+        </div>
+        <p class="policy-disclaimer" data-i18n="policyDisclaimer">Pre-launch policy summary • Last updated July 2026 • Full enrollment terms will be provided before paid programs open.</p>
       </div>
     </section>
   </main>
@@ -149,7 +185,7 @@
     <div class="container footer-grid">
       <a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true">WH</span><span class="brand-copy"><strong>WEI HAO</strong><small data-i18n="brandSub">Football Academy</small></span></a>
       <p data-i18n="footerLine">Developing skilful players and confident young people.</p>
-      <div><a href="mailto:info@weihaoacademy.com">info@weihaoacademy.com</a><small>© <span id="year"></span> Wei Hao Football Academy</small></div>
+      <div class="footer-contact"><a href="mailto:info@weihaoacademy.com">info@weihaoacademy.com</a><a href="tel:+886975235228">+886 975-235-228</a><nav aria-label="Policies"><a href="#safeguarding" data-i18n="safeguardingTitle">Safeguarding</a><a href="#cancellations" data-i18n="cancellationShort">Cancellations</a><a href="#privacy" data-i18n="privacyTitle">Privacy</a></nav><small>© <span id="year"></span> Wei Hao Football Academy</small></div>
     </div>
   </footer>
   <script src="script.js"></script>
