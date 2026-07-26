@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title>Kick and Speak KS shield</title>
+  <path d="M32 4C39 8 47 10 56 10v20c0 14-9 24-24 30C17 54 8 44 8 30V10c9 0 17-2 24-6Z" fill="#073427" stroke="#1769e8" stroke-width="4" stroke-linejoin="round"/>
+  <text x="32" y="38" text-anchor="middle" fill="#d8f23f" font-family="Impact,Arial Black,sans-serif" font-size="21" letter-spacing="-1">KS</text>
+</svg>
