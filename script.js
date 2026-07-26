@@ -36,15 +36,30 @@ function applyLanguage(lang) {
   localStorage.setItem('kick-speak-language', lang);
 }
 
-document.getElementById('languageButton').addEventListener('click', () => applyLanguage(language === 'en' ? 'zh' : 'en'));
+document.getElementById('languageButton').addEventListener('click', () => {
+  applyLanguage(language === 'en' ? 'zh' : 'en');
+  updateMenuLabel(false);
+});
 applyLanguage(language);
 
 const menuButton = document.getElementById('menuButton');
 const navigation = document.getElementById('primaryNav');
-function closeMenu(){ navigation.classList.remove('open'); menuButton.setAttribute('aria-expanded','false'); document.body.classList.remove('menu-open'); }
-menuButton.addEventListener('click', () => { const open = navigation.classList.toggle('open'); menuButton.setAttribute('aria-expanded', String(open)); document.body.classList.toggle('menu-open', open); });
+function updateMenuLabel(open) {
+  menuButton.setAttribute('aria-label', language === 'zh' ? (open ? '關閉選單' : '開啟選單') : (open ? 'Close menu' : 'Open menu'));
+}
+function closeMenu(){ navigation.classList.remove('open'); menuButton.setAttribute('aria-expanded','false'); document.body.classList.remove('menu-open'); updateMenuLabel(false); }
+menuButton.addEventListener('click', () => { const open = navigation.classList.toggle('open'); menuButton.setAttribute('aria-expanded', String(open)); document.body.classList.toggle('menu-open', open); updateMenuLabel(open); });
 navigation.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
 document.addEventListener('keydown', event => { if(event.key === 'Escape') closeMenu(); });
+window.addEventListener('resize', () => { if (window.innerWidth > 980) closeMenu(); });
+updateMenuLabel(false);
+
+function revealPolicyFromHash() {
+  const target = document.getElementById(location.hash.slice(1));
+  if (target?.matches('.policy-list details')) target.open = true;
+}
+window.addEventListener('hashchange', revealPolicyFromHash);
+revealPolicyFromHash();
 
 document.querySelectorAll('[data-program]').forEach(link => link.addEventListener('click', () => { document.getElementById('programSelect').value = link.dataset.program; }));
 
@@ -53,8 +68,10 @@ document.getElementById('trialForm').addEventListener('submit', event => {
   const form = event.currentTarget;
   if (!form.reportValidity()) return;
   const data = new FormData(form);
-  const subject = `Trial enquiry — ${data.get('program')}`;
-  const body = [`Parent / guardian: ${data.get('name')}`, `Email: ${data.get('email')}`, `Phone / WhatsApp: ${data.get('phone') || 'Not provided'}`, `Player age: ${data.get('age')}`, `Preferred city: ${data.get('city')}`, `Program: ${data.get('program')}`, '', `Notes: ${data.get('message') || 'None provided'}`].join('\n');
+  const subject = language === 'zh' ? `試堂查詢 — ${data.get('program')}` : `Trial enquiry — ${data.get('program')}`;
+  const body = language === 'zh'
+    ? [`家長／監護人：${data.get('name')}`, `電郵：${data.get('email')}`, `電話／WhatsApp：${data.get('phone') || '未提供'}`, `球員年齡：${data.get('age')}`, `首選城市：${data.get('city')}`, `課程：${data.get('program')}`, '', `備註：${data.get('message') || '無'}`].join('\n')
+    : [`Parent / guardian: ${data.get('name')}`, `Email: ${data.get('email')}`, `Phone / WhatsApp: ${data.get('phone') || 'Not provided'}`, `Player age: ${data.get('age')}`, `Preferred city: ${data.get('city')}`, `Program: ${data.get('program')}`, '', `Notes: ${data.get('message') || 'None provided'}`].join('\n');
   document.getElementById('formStatus').textContent = language === 'zh' ? '正在開啟您的電郵程式…' : 'Opening your email app…';
   window.location.href = `mailto:info@weihaoacademy.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 });
