@@ -41,6 +41,7 @@ function applyLanguage(lang) {
 document.getElementById('languageButton').addEventListener('click', () => {
   applyLanguage(language === 'en' ? 'zh' : 'en');
   updateMenuLabel(false);
+  updateProgramRecommendation();
 });
 applyLanguage(language);
 
@@ -63,7 +64,43 @@ function revealPolicyFromHash() {
 window.addEventListener('hashchange', revealPolicyFromHash);
 revealPolicyFromHash();
 
-document.querySelectorAll('[data-program]').forEach(link => link.addEventListener('click', () => { document.getElementById('programSelect').value = link.dataset.program; }));
+const playerAge = document.getElementById('playerAge');
+const programSelect = document.getElementById('programSelect');
+const programRecommendation = document.getElementById('programRecommendation');
+let programWasAutoSelected = false;
+
+function programForAge(age) {
+  if (age >= 4 && age <= 6) return 'Little Kickers';
+  if (age >= 7 && age <= 10) return 'Junior Academy';
+  if (age >= 11 && age <= 14) return 'Youth Development';
+  if (age >= 15 && age <= 18) return 'Elite Training Squad';
+  return '';
+}
+
+function updateProgramRecommendation() {
+  const age = Number(playerAge.value);
+  const recommendedProgram = programForAge(age);
+  if (!playerAge.value || !recommendedProgram) {
+    programRecommendation.textContent = '';
+    return;
+  }
+  if (!programSelect.value || programWasAutoSelected) {
+    programSelect.value = recommendedProgram;
+    programWasAutoSelected = true;
+  }
+  programRecommendation.textContent = language === 'zh'
+    ? `${age} 歲建議課程：${recommendedProgram}`
+    : `Recommended for age ${age}: ${recommendedProgram}`;
+}
+
+playerAge.addEventListener('input', updateProgramRecommendation);
+programSelect.addEventListener('change', () => { programWasAutoSelected = false; });
+document.querySelectorAll('[data-program]').forEach(link => link.addEventListener('click', () => {
+  programSelect.value = link.dataset.program;
+  programWasAutoSelected = false;
+  updateProgramRecommendation();
+}));
+updateProgramRecommendation();
 
 document.querySelectorAll('img').forEach(image => image.addEventListener('error', () => image.classList.add('image-load-error'), { once: true }));
 
